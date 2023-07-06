@@ -1,4 +1,4 @@
-```sh
+
 # Telnyx-Wdio-Docker-test
 
 This project do https://telnyx.com/ part of the functionality e2e tests on wdio-mocha framework .
