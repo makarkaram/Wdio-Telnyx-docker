@@ -1,0 +1,37 @@
+{
+  "name": "wdiotelnyx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.js",
+    "report:history": "cp -R allure-report/history/ allure-results/history",
+    "test:report": "rm -r allure-results/history && cp -R allure-report/history/ allure-results/history && npx wdio run wdio.conf.js",
+    "report:generate": "allure generate",
+    "wdio:docker": "wdio run wdio.docker.conf.js",
+    "docker": "docker-compose up",
+    "allure:clean": "rm -rf allure-results/* allure-report/*",
+    "chrome": "wdio run wdio.chrome.conf.js",
+    "firefox": "wdio run wdio.firefox.conf.js",
+    "edge": "wdio run wdio.edge.conf.js",
+    "docker down": "docker-compose -f docker-compose.yml down"
+  },
+  "author": "",
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "description": "",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.11.0",
+    "@wdio/cli": "^8.11.2",
+    "@wdio/local-runner": "^8.11.2",
+    "@wdio/mocha-framework": "^8.11.0",
+    "@wdio/spec-reporter": "^8.11.2",
+    "chromedriver": "^114.0.2",
+    "wdio-chromedriver-service": "^8.1.1",
+    "wdio-docker-service": "^3.2.1"
+  },
+  "dependencies": {
+    "wdio-selenium-standalone-service": "^0.0.12"
+  }
+}

@@ -1,0 +1,5 @@
+README.md
+.git
+.dockerignore
+allure-report
+allure-result
